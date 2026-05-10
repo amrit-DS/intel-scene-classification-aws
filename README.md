@@ -15,16 +15,13 @@ End-to-end computer vision pipeline deployed on AWS SageMaker. Compares a baseli
 
 ### Performance Comparison
 
-<table>
-<tr>
-<td align="center"><b>Baseline CNN — 84.2%</b></td>
-<td align="center"><b>ResNet50 TL — 92.1%</b></td>
-</tr>
-<tr>
-<td><img src="results/baseline\\\_confusion\\\_matrix.png" alt="Baseline Confusion Matrix" /></td>
-<td><img src="results/resnet50\\\_confusion\\\_matrix.png" alt="ResNet50 Confusion Matrix" /></td>
-</tr>
-</table>
+**Baseline CNN — 84.2%**
+
+!\[Baseline Confusion Matrix](results/baseline\_confusion\_matrix.png)
+
+**ResNet50 Transfer Learning — 92.1%**
+
+!\[ResNet50 Confusion Matrix](results/resnet50\_confusion\_matrix.png)
 
 The transfer learning model showed the most significant improvement on the **glacier vs mountain** distinction, where the baseline CNN frequently confused the two classes due to similar snow-covered features.
 
@@ -105,7 +102,7 @@ This project uses SageMaker's **script mode** rather than the SageMaker Studio G
 
 **What was implemented:**
 
-* ✅ Custom training scripts (`train\\\_baseline.py`, `train\\\_resnet50.py`) deployed via the SageMaker TensorFlow estimator
+* ✅ Custom training scripts (`train\_baseline.py`, `train\_resnet50.py`) deployed via the SageMaker TensorFlow estimator
 * ✅ Hyperparameters passed at training time for reproducibility
 * ✅ S3 data channels for training/validation
 * ✅ Model artifact versioning and repackaging for TensorFlow Serving
@@ -114,12 +111,13 @@ This project uses SageMaker's **script mode** rather than the SageMaker Studio G
 
 **Deployed infrastructure (verified — see screenshots):**
 
-<table>
-<tr>
-<td><img src="docs/aws\\\_screenshots/05\\\_sagemaker\\\_training\\\_job.png" alt="Training Job" width="400"/></td>
-<td><img src="docs/aws\\\_screenshots/06\\\_sagemaker\\\_endpoint\\\_deployed.png" alt="Endpoint" width="400"/></td>
-</tr>
-</table>
+!\[SageMaker Training Job](docs/aws\_screenshots/05\_sagemaker\_training\_job.png)
+
+*SageMaker training job completed successfully (account ID redacted for privacy).*
+
+!\[SageMaker Endpoint Deployed](docs/aws\_screenshots/06\_sagemaker\_endpoint\_deployed.png)
+
+*Real-time inference endpoint InService and operational.*
 
 \---
 
@@ -142,20 +140,20 @@ A deliberate cost-conscious design using `ml.m5.large` (CPU-based) instead of GP
 ```
 intel-scene-classification-aws/
 ├── notebooks/
-│   └── intel\\\_scene\\\_classification.ipynb  # Main orchestration notebook
+│   └── intel\_scene\_classification.ipynb  # Main orchestration notebook
 ├── scripts/
-│   ├── train\\\_baseline.py                 # SageMaker training script for baseline CNN
-│   ├── train\\\_resnet50.py                 # SageMaker training script for ResNet50 TL
+│   ├── train\_baseline.py                 # SageMaker training script for baseline CNN
+│   ├── train\_resnet50.py                 # SageMaker training script for ResNet50 TL
 │   └── inference.py                      # Endpoint inference handler
 ├── results/
-│   ├── baseline\\\_confusion\\\_matrix.png
-│   ├── baseline\\\_accuracy\\\_curve.png
-│   ├── baseline\\\_loss\\\_curve.png
-│   ├── resnet50\\\_confusion\\\_matrix.png
-│   └── model\\\_summary.csv
+│   ├── baseline\_confusion\_matrix.png
+│   ├── baseline\_accuracy\_curve.png
+│   ├── baseline\_loss\_curve.png
+│   ├── resnet50\_confusion\_matrix.png
+│   └── model\_summary.csv
 ├── docs/
-│   ├── project\\\_report.pdf                # Full academic report
-│   └── aws\\\_screenshots/                  # AWS console evidence
+│   ├── project\_report.pdf                # Full academic report
+│   └── aws\_screenshots/                  # AWS console evidence
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -185,20 +183,21 @@ pip install -r requirements.txt
 ### Running
 
 1. Download the [Intel Image Classification dataset](https://www.kaggle.com/datasets/puneet6060/intel-image-classification) and upload to your S3 bucket.
-2. Open `notebooks/intel\\\_scene\\\_classification.ipynb` in a SageMaker notebook instance.
-3. Update the bucket name placeholders (`<ACCOUNT\\\_ID>`, `<BUCKET\\\_SUFFIX>`) with your AWS account values.
+2. Open `notebooks/intel\_scene\_classification.ipynb` in a SageMaker notebook instance.
+3. Update the bucket name placeholders (`<ACCOUNT\_ID>`, `<BUCKET\_SUFFIX>`) with your AWS account values.
 4. Run cells sequentially to train, evaluate, and deploy.
 
 \---
 
 ## 📷 Training Curves
 
-<table>
-<tr>
-<td><img src="results/baseline\\\_accuracy\\\_curve.png" alt="Accuracy Curve" /></td>
-<td><img src="results/baseline\\\_loss\\\_curve.png" alt="Loss Curve" /></td>
-</tr>
-</table>
+**Accuracy over epochs**
+
+!\[Accuracy Curve](results/baseline\_accuracy\_curve.png)
+
+**Loss over epochs**
+
+!\[Loss Curve](results/baseline\_loss\_curve.png)
 
 \---
 
@@ -215,7 +214,7 @@ pip install -r requirements.txt
 
 **Amrit** — Aspiring Data Scientist | JCU Master's of Data Science
 
-* LinkedIn: \[Amrit](*https://www.linkedin.com/in/amrit-300668s/)*
+* LinkedIn: \[Amrit](https://www.linkedin.com/in/amrit-300668s/) 
 * GitHub: [@amrit-DS](https://github.com/amrit-DS)
 
 \---
