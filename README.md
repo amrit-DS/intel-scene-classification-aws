@@ -29,7 +29,7 @@ The transfer learning model showed the most significant improvement on the **gla
 
 ## 🎯 Project Overview
 
-**Goal:** Classify natural and urban scenes into six categories — *buildings, forest, glacier, mountain, sea, street* — using deep learning, while comparing custom architectures vs. pre-trained networks and demonstrating production cloud deployment practices.
+**Goal:** Classify natural and urban scenes into six categories *buildings, forest, glacier, mountain, sea, street* — using deep learning, while comparing custom architectures vs. pre-trained networks and demonstrating production cloud deployment practices.
 
 **Dataset:** [Intel Image Classification](https://www.kaggle.com/datasets/puneet6060/intel-image-classification) (~17,000 training images, 3,000 test images, 6 balanced classes).
 
@@ -201,16 +201,16 @@ pip install -r requirements.txt
 
 ## 📚 References
 
-- He, K., et al. (2016). *Deep Residual Learning for Image Recognition* — [CVPR 2016](https://doi.org/10.1109/CVPR.2016.90)
-- Krizhevsky, A., et al. (2012). *ImageNet Classification with Deep CNNs* — AlexNet
-- Srivastava, N., et al. (2014). *Dropout: A Simple Way to Prevent Neural Networks from Overfitting* — JMLR
-- AWS SageMaker Developer Guide — [docs.aws.amazon.com/sagemaker](https://docs.aws.amazon.com/sagemaker/)
+- He, K., et al. (2016). *Deep Residual Learning for Image Recognition* [CVPR 2016](https://doi.org/10.1109/CVPR.2016.90)
+- Krizhevsky, A., et al. (2012). *ImageNet Classification with Deep CNNs* AlexNet
+- Srivastava, N., et al. (2014). *Dropout: A Simple Way to Prevent Neural Networks from Overfitting* JMLR
+- AWS SageMaker Developer Guide [docs.aws.amazon.com/sagemaker](https://docs.aws.amazon.com/sagemaker/)
 
 ---
 
 ## 📫 Contact
 
-**Amrit** — Aspiring Data Scientist | JCU Master's of Data Science
+**Amrit** Aspiring Data Scientist | JCU Master's of Data Science
 
 - LinkedIn: [Amrit](https://www.linkedin.com/in/amrit-300668s/)
 - GitHub: [@amrit-DS](https://github.com/amrit-DS)
